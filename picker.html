@@ -242,51 +242,48 @@ button.disabled:hover {
 <script>
 'use strict';
 
-var items_danganronpa1 = [
-    {id: 'Monokuma',            name: 'Monokuma',           image: './images/danganronpa1/Monokuma.png',            game:[1,2,3,4]},
-    {id: 'MakotoNaegi',         name: 'Makoto Naegi',       image: './images/danganronpa1/Makoto_Naegi.png',        game:[1,2]},
-    {id: 'ByakuyaTogami',       name: 'Byakuya Togami',     image: './images/danganronpa1/Byakuya_Togami.png',      game:[1,2]},
-    {id: 'CelestiaLudenberg',   name: 'Celestia Ludenberg', image: './images/danganronpa1/Celestia_Ludenberg.png',  game:1},
-    {id: 'AoiAsahina',          name: 'Aoi Asahina',        image: './images/danganronpa1/Aoi_Asahina.png',         game:1},
-    {id: 'ChihiroFujisaki',     name: 'Chihiro Fujisaki',   image: './images/danganronpa1/Chihiro_Fujisaki.png',    game:1},
-    {id: 'HifumiYamada',        name: 'Hifumi Yamada',      image: './images/danganronpa1/Hifumi_Yamada.png',       game:1},
-    {id: 'JunkoEnoshima',       name: 'Junko Enoshima',     image: './images/danganronpa1/Junko_Enoshima.png',      game:[1,2]},
-    {id: 'KiyotakaIshimaru',    name: 'Kiyotaka Ishimaru',  image: './images/danganronpa1/Kiyotaka_Ishimaru.png',   game:1},
-    {id: 'KyokoKirigiri',       name: 'Kyoko Kirigiri',     image: './images/danganronpa1/Kyoko_Kirigiri.png',      game:[1,2]},
-    {id: 'LeonKuwata',          name: 'Leon Kuwata',        image: './images/danganronpa1/Leon_Kuwata.png',         game:1},
-    {id: 'MondoOwada',          name: 'Mondo Owada',        image: './images/danganronpa1/Mondo_Owada.png',         game:1},
-    {id: 'MukuroIkusaba',       name: 'Mukuro Ikusaba',     image: './images/danganronpa1/Mukuro_Ikusaba.png',      game:1},
-    {id: 'SakuraOgami',         name: 'Sakura Ogami',       image: './images/danganronpa1/Sakura_Ogami.png',        game:1},
-    {id: 'SayakaMaizono',       name: 'Sayaka Maizono',     image: './images/danganronpa1/Sayaka_Maizono.png',      game:1},
-    {id: 'TokoFukawa',          name: 'Toko Fukawa',        image: './images/danganronpa1/Toko_Fukawa.png',         game:1},
-    {id: 'YasuhiroHagakure',    name: 'Yasuhiro Hagakure',  image: './images/danganronpa1/Yasuhiro_Hagakure.png',   game:1},
-    {id: 'AlterEgo',            name: 'Alter Ego',          image: './images/danganronpa1/Alter_Ego.png',           game:1}
-];
-
-var items_danganronpa2 = [
-    {id: 'HajimeHinata',        name: 'Hajime Hinata',      image: './images/danganronpa2/Hajime_Hinata.png',       game:2},
-    {id: 'AkaneOwari',          name: 'Akane Owari',        image: './images/danganronpa2/Akane_Owari.png',         game:2},
-    {id: 'UltimateImposter',    name: 'Ultimate Imposter',  image: './images/danganronpa2/Ultimate_Imposter.png',   game:2},
-    {id: 'ChiakiNanami',        name: 'Chiaki Nanami',      image: './images/danganronpa2/Chiaki_Nanami.png',       game:2},
-    {id: 'FuyuhikoKuzuryu',     name: 'Fuyuhiko Kuzuryu',   image: './images/danganronpa2/Fuyuhiko_Kuzuryu.png',    game:2},
-    {id: 'GundhamTanaka',       name: 'Gundham Tanaka',     image: './images/danganronpa2/Gundham_Tanaka.png',      game:2},
-    {id: 'HiyokoSaionji',       name: 'Hiyoko Saionji',     image: './images/danganronpa2/Hiyoko_Saionji.png',      game:2},
-    {id: 'IbukiMioda',          name: 'Ibuki Mioda',        image: './images/danganronpa2/Ibuki_Mioda.png',         game:2},
-    {id: 'KazuichiSoda',        name: 'Kazuichi Soda',      image: './images/danganronpa2/Kazuichi_Soda.png',       game:2},
-    {id: 'MahiruKoizumi',       name: 'Mahiru Koizumi',     image: './images/danganronpa2/Mahiru_Koizumi.png',      game:2},
-    {id: 'MikanTsumiki',        name: 'Mikan Tsumiki',      image: './images/danganronpa2/Mikan_Tsumiki.png',       game:2},
-    {id: 'NagitoKomaeda',       name: 'Nagito Komaeda',     image: './images/danganronpa2/Nagito_Komaeda.png',      game:2},
-    {id: 'NekomaruNidai',       name: 'Nekomaru Nidai',     image: './images/danganronpa2/Nekomaru_Nidai.png',      game:2},
-    {id: 'PekoPekoyama',        name: 'Peko Pekoyama',      image: './images/danganronpa2/Peko_Pekoyama.png',       game:2},
-    {id: 'SoniaNevermind',      name: 'Sonia Nevermind',    image: './images/danganronpa2/Sonia_Nevermind.png',     game:2},
-    {id: 'TeruteruHanamura',    name: 'Teruteru Hanamura',  image: './images/danganronpa2/Teruteru_Hanamura.png',   game:2},
-    {id: 'Mechamaru',           name: 'Mechamaru',          image: './images/danganronpa2/Mechamaru.png',           game:2},
-    {id: 'Monomi',              name: 'Monomi',             image: './images/danganronpa2/Monomi.png',              game:2},
-    {id: 'IzuruKamukura',       name: 'Izuru Kamukura',     image: './images/danganronpa2/Izuru_Kamukura.png',      game:2}
+var items = [
+    {id: 'Monokuma',            name: 'Monokuma',           image: './images/danganronpa1/Monokuma.png',            shortcode:'aa',     game:[1,2,3,4]},
+    {id: 'MakotoNaegi',         name: 'Makoto Naegi',       image: './images/danganronpa1/Makoto_Naegi.png',        shortcode:'ab',     game:[1,2]},
+    {id: 'ByakuyaTogami',       name: 'Byakuya Togami',     image: './images/danganronpa1/Byakuya_Togami.png',      shortcode:'ac',     game:[1,2]},
+    {id: 'CelestiaLudenberg',   name: 'Celestia Ludenberg', image: './images/danganronpa1/Celestia_Ludenberg.png',  shortcode:'ad',     game:1},
+    {id: 'AoiAsahina',          name: 'Aoi Asahina',        image: './images/danganronpa1/Aoi_Asahina.png',         shortcode:'ae',     game:1},
+    {id: 'ChihiroFujisaki',     name: 'Chihiro Fujisaki',   image: './images/danganronpa1/Chihiro_Fujisaki.png',    shortcode:'af',     game:1},
+    {id: 'HifumiYamada',        name: 'Hifumi Yamada',      image: './images/danganronpa1/Hifumi_Yamada.png',       shortcode:'ag',     game:1},
+    {id: 'JunkoEnoshima',       name: 'Junko Enoshima',     image: './images/danganronpa1/Junko_Enoshima.png',      shortcode:'ah',     game:[1,2]},
+    {id: 'KiyotakaIshimaru',    name: 'Kiyotaka Ishimaru',  image: './images/danganronpa1/Kiyotaka_Ishimaru.png',   shortcode:'ai',     game:1},
+    {id: 'KyokoKirigiri',       name: 'Kyoko Kirigiri',     image: './images/danganronpa1/Kyoko_Kirigiri.png',      shortcode:'aj',     game:[1,2]},
+    {id: 'LeonKuwata',          name: 'Leon Kuwata',        image: './images/danganronpa1/Leon_Kuwata.png',         shortcode:'ak',     game:1},
+    {id: 'MondoOwada',          name: 'Mondo Owada',        image: './images/danganronpa1/Mondo_Owada.png',         shortcode:'al',     game:1},
+    {id: 'MukuroIkusaba',       name: 'Mukuro Ikusaba',     image: './images/danganronpa1/Mukuro_Ikusaba.png',      shortcode:'am',     game:1},
+    {id: 'SakuraOgami',         name: 'Sakura Ogami',       image: './images/danganronpa1/Sakura_Ogami.png',        shortcode:'an',     game:1},
+    {id: 'SayakaMaizono',       name: 'Sayaka Maizono',     image: './images/danganronpa1/Sayaka_Maizono.png',      shortcode:'ao',     game:1},
+    {id: 'TokoFukawa',          name: 'Toko Fukawa',        image: './images/danganronpa1/Toko_Fukawa.png',         shortcode:'ap',     game:1},
+    {id: 'YasuhiroHagakure',    name: 'Yasuhiro Hagakure',  image: './images/danganronpa1/Yasuhiro_Hagakure.png',   shortcode:'aq',     game:1},
+    {id: 'AlterEgo',            name: 'Alter Ego',          image: './images/danganronpa1/Alter_Ego.png',           shortcode:'ar',     game:1},
+    {id: 'HajimeHinata',        name: 'Hajime Hinata',      image: './images/danganronpa2/Hajime_Hinata.png',       shortcode:'as',     game:2},
+    {id: 'AkaneOwari',          name: 'Akane Owari',        image: './images/danganronpa2/Akane_Owari.png',         shortcode:'at',     game:2},
+    {id: 'UltimateImposter',    name: 'Ultimate Imposter',  image: './images/danganronpa2/Ultimate_Imposter.png',   shortcode:'au',     game:2},
+    {id: 'ChiakiNanami',        name: 'Chiaki Nanami',      image: './images/danganronpa2/Chiaki_Nanami.png',       shortcode:'av',     game:2},
+    {id: 'FuyuhikoKuzuryu',     name: 'Fuyuhiko Kuzuryu',   image: './images/danganronpa2/Fuyuhiko_Kuzuryu.png',    shortcode:'aw',     game:2},
+    {id: 'GundhamTanaka',       name: 'Gundham Tanaka',     image: './images/danganronpa2/Gundham_Tanaka.png',      shortcode:'ax',     game:2},
+    {id: 'HiyokoSaionji',       name: 'Hiyoko Saionji',     image: './images/danganronpa2/Hiyoko_Saionji.png',      shortcode:'ay',     game:2},
+    {id: 'IbukiMioda',          name: 'Ibuki Mioda',        image: './images/danganronpa2/Ibuki_Mioda.png',         shortcode:'az',     game:2},
+    {id: 'KazuichiSoda',        name: 'Kazuichi Soda',      image: './images/danganronpa2/Kazuichi_Soda.png',       shortcode:'ba',     game:2},
+    {id: 'MahiruKoizumi',       name: 'Mahiru Koizumi',     image: './images/danganronpa2/Mahiru_Koizumi.png',      shortcode:'bb',     game:2},
+    {id: 'MikanTsumiki',        name: 'Mikan Tsumiki',      image: './images/danganronpa2/Mikan_Tsumiki.png',       shortcode:'bc',     game:2},
+    {id: 'NagitoKomaeda',       name: 'Nagito Komaeda',     image: './images/danganronpa2/Nagito_Komaeda.png',      shortcode:'bd',     game:2},
+    {id: 'NekomaruNidai',       name: 'Nekomaru Nidai',     image: './images/danganronpa2/Nekomaru_Nidai.png',      shortcode:'be',     game:2},
+    {id: 'PekoPekoyama',        name: 'Peko Pekoyama',      image: './images/danganronpa2/Peko_Pekoyama.png',       shortcode:'bf',     game:2},
+    {id: 'SoniaNevermind',      name: 'Sonia Nevermind',    image: './images/danganronpa2/Sonia_Nevermind.png',     shortcode:'bg',     game:2},
+    {id: 'TeruteruHanamura',    name: 'Teruteru Hanamura',  image: './images/danganronpa2/Teruteru_Hanamura.png',   shortcode:'bh',     game:2},
+    {id: 'Mechamaru',           name: 'Mechamaru',          image: './images/danganronpa2/Mechamaru.png',           shortcode:'bi',     game:2},
+    {id: 'Monomi',              name: 'Monomi',             image: './images/danganronpa2/Monomi.png',              shortcode:'bj',     game:2},
+    {id: 'IzuruKamukura',       name: 'Izuru Kamukura',     image: './images/danganronpa2/Izuru_Kamukura.png',      shortcode:'bk',     game:2}
 ]
 
 var items_alternate = [
-    {id: 'HajimeHinataSSJ',     name: 'Hajime Hinata SSJ',  image: './images/danganronpa2/Alternate/Hajime_Hinata_SSJ.png', game:2}
+    {id: 'HajimeHinataSSJ',     name: 'Hajime Hinata SSJ',  image: './images/danganronpa2/Alternate/Hajime_Hinata_SSJ.png', shortcode:'bl', game:2}
 ]
 
 var danganronpaGames = [1,2,3,4];
@@ -297,9 +294,10 @@ var defaultSettings = {
 };
 
 var myPicker = new picker.Picker({
-    items: items_danganronpa1.concat(items_danganronpa2),
+    items: items,
     localStorageKey: 'picker-state',
     defaultSettings: defaultSettings,
+    shortcodeLength: 2,
     shouldIncludeItem: function(item, settings) {
         // Include only if:
         // 1. the character's role is in the list of roles we've checked, and
