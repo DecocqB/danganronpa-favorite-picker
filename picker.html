@@ -233,29 +233,55 @@ button.disabled:hover {
 <script>
 'use strict';
 
-var items = [
-    {id: 'Monokuma', name: 'Monokuma', image: './images/Monokuma.png'},
-    {id: 'MakotoNaegi', name: 'Makoto Naegi', image: './images/Makoto_Naegi.png'},
-    {id: 'ByakuyaTogami', name: 'Byakuya Togami', image: './images/Byakuya_Togami.png'},
-    {id: 'CelestiaLudenberg', name: 'Celestia Ludenberg', image: './images/Celestia_Ludenberg.png'},
-    {id: 'AoiAsahina', name: 'Aoi Asahina', image: './images/Aoi_Asahina.png'},
-    {id: 'ChihiroFujisaki', name: 'Chihiro Fujisaki', image: './images/Chihiro_Fujisaki.png'},
-    {id: 'HifumiYamada', name: 'Hifumi Yamada', image: './images/Hifumi_Yamada.png'},
-    {id: 'JunkoEnoshima', name: 'Junko Enoshima', image: './images/Junko_Enoshima.png'},
-    {id: 'KiyotakaIshimaru', name: 'Kiyotaka Ishimaru', image: './images/Kiyotaka_Ishimaru.png'},
-    {id: 'KyokoKirigiri', name: 'Kyoko Kirigiri', image: './images/Kyoko_Kirigiri.png'},
-    {id: 'LeonKuwata', name: 'Leon Kuwata', image: './images/Leon_Kuwata.png'},
-    {id: 'MondoOwada', name: 'Mondo Owada', image: './images/Mondo_Owada.png'},
-    {id: 'MukuroIkusaba', name: 'Mukuro Ikusaba', image: './images/Mukuro_Ikusaba.png'},
-    {id: 'SakuraOgami', name: 'Sakura Ogami', image: './images/Sakura_Ogami.png'},
-    {id: 'SayakaMaizono', name: 'Sayaka Maizono', image: './images/Sayaka_Maizono.png'},
-    {id: 'TokoFukawa', name: 'Toko Fukawa', image: './images/Toko_Fukawa.png'},
-    {id: 'YasuhiroHagakure', name: 'Yasuhiro Hagakure', image: './images/Yasuhiro_Hagakure.png'},
-    {id: 'AlterEgo', name: 'Alter Ego', image: './images/Alter_Ego.png'},
+var items_danganronpa1 = [
+    {id: 'Monokuma',            name: 'Monokuma',           image: './images/danganronpa1/Monokuma.png'},
+    {id: 'MakotoNaegi',         name: 'Makoto Naegi',       image: './images/danganronpa1/Makoto_Naegi.png'},
+    {id: 'ByakuyaTogami',       name: 'Byakuya Togami',     image: './images/danganronpa1/Byakuya_Togami.png'},
+    {id: 'CelestiaLudenberg',   name: 'Celestia Ludenberg', image: './images/danganronpa1/Celestia_Ludenberg.png'},
+    {id: 'AoiAsahina',          name: 'Aoi Asahina',        image: './images/danganronpa1/Aoi_Asahina.png'},
+    {id: 'ChihiroFujisaki',     name: 'Chihiro Fujisaki',   image: './images/danganronpa1/Chihiro_Fujisaki.png'},
+    {id: 'HifumiYamada',        name: 'Hifumi Yamada',      image: './images/danganronpa1/Hifumi_Yamada.png'},
+    {id: 'JunkoEnoshima',       name: 'Junko Enoshima',     image: './images/danganronpa1/Junko_Enoshima.png'},
+    {id: 'KiyotakaIshimaru',    name: 'Kiyotaka Ishimaru',  image: './images/danganronpa1/Kiyotaka_Ishimaru.png'},
+    {id: 'KyokoKirigiri',       name: 'Kyoko Kirigiri',     image: './images/danganronpa1/Kyoko_Kirigiri.png'},
+    {id: 'LeonKuwata',          name: 'Leon Kuwata',        image: './images/danganronpa1/Leon_Kuwata.png'},
+    {id: 'MondoOwada',          name: 'Mondo Owada',        image: './images/danganronpa1/Mondo_Owada.png'},
+    {id: 'MukuroIkusaba',       name: 'Mukuro Ikusaba',     image: './images/danganronpa1/Mukuro_Ikusaba.png'},
+    {id: 'SakuraOgami',         name: 'Sakura Ogami',       image: './images/danganronpa1/Sakura_Ogami.png'},
+    {id: 'SayakaMaizono',       name: 'Sayaka Maizono',     image: './images/danganronpa1/Sayaka_Maizono.png'},
+    {id: 'TokoFukawa',          name: 'Toko Fukawa',        image: './images/danganronpa1/Toko_Fukawa.png'},
+    {id: 'YasuhiroHagakure',    name: 'Yasuhiro Hagakure',  image: './images/danganronpa1/Yasuhiro_Hagakure.png'},
+    {id: 'AlterEgo',            name: 'Alter Ego',          image: './images/danganronpa1/Alter_Ego.png'}
 ];
 
+var items_danganronpa2 = [
+    {id: 'HajimeHinata',        name: 'Hajime Hinata',      image: './images/danganronpa2/Hajime_Hinata.png'},
+    {id: 'AkaneOwari',          name: 'Akane Owari',        image: './images/danganronpa2/Akane_Owari.png'},
+    {id: 'UltimateImposter',    name: 'Ultimate Imposter',  image: './images/danganronpa2/Ultimate_Imposter.png'},
+    {id: 'ChiakiNanami',        name: 'Chiaki Nanami',      image: './images/danganronpa2/Chiaki_Nanami.png'},
+    {id: 'FuyuhikoKuzuryu',     name: 'Fuyuhiko Kuzuryu',   image: './images/danganronpa2/Fuyuhiko_Kuzuryu.png'},
+    {id: 'GundhamTanaka',       name: 'Gundham Tanaka',     image: './images/danganronpa2/Gundham_Tanaka.png'},
+    {id: 'HiyokoSaionji',       name: 'Hiyoko Saionji',     image: './images/danganronpa2/Hiyoko_Saionji.png'},
+    {id: 'IbukiMioda',          name: 'Ibuki Mioda',        image: './images/danganronpa2/Ibuki_Mioda.png'},
+    {id: 'KazuichiSoda',        name: 'Kazuichi Soda',      image: './images/danganronpa2/Kazuichi_Soda.png'},
+    {id: 'MahiruKoizumi',       name: 'Mahiru Koizumi',     image: './images/danganronpa2/Mahiru_Koizumi.png'},
+    {id: 'MikanTsumiki',        name: 'Mikan Tsumiki',      image: './images/danganronpa2/Mikan_Tsumiki.png'},
+    {id: 'NagitoKomaeda',       name: 'Nagito Komaeda',     image: './images/danganronpa2/Nagito_Komaeda.png'},
+    {id: 'NekomaruNidai',       name: 'Nekomaru Nidai',     image: './images/danganronpa2/Nekomaru_Nidai.png'},
+    {id: 'PekoPekoyama',        name: 'Peko Pekoyama',      image: './images/danganronpa2/Peko_Pekoyama.png'},
+    {id: 'SoniaNevermind',      name: 'Sonia Nevermind',    image: './images/danganronpa2/Sonia_Nevermind.png'},
+    {id: 'TeruteruHanamura',    name: 'Teruteru Hanamura',  image: './images/danganronpa2/Teruteru_Hanamura.png'},
+    {id: 'Mechamaru',           name: 'Mechamaru',          image: './images/danganronpa2/Mechamaru.png'},
+    {id: 'Monomi',              name: 'Monomi',             image: './images/danganronpa2/Monomi.png'},
+    {id: 'IzuruKamukura',       name: 'Izuru Kamukura',     image: './images/danganronpa2/Izuru_Kamukura.png'}
+]
+
+var items_alternate = [
+    {id: 'HajimeHinataSSJ',     name: 'Hajime Hinata SSJ',  image: './images/danganronpa2/Alternate/Hajime_Hinata_SSJ.png'}
+]
+
 var myPicker = new picker.Picker({
-    items: items
+    items: items_danganronpa1.concat(items_danganronpa2)
 });
 
 var pickerUI = new PickerUI(myPicker, {
